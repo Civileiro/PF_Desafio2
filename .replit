@@ -1,0 +1,19 @@
+entrypoint = "Main.hs"
+
+hidden = [".ghci", "ghci_wrapper.sh"]
+
+# compile = ["nix-build"]
+
+run = ["./PFDesafio2"]
+
+# [interpreter]
+# command = ["./ghci_wrapper.sh"]
+
+[languages.haskell]
+pattern = "**/*.hs"
+
+[languages.haskell.languageServer]
+start = ["haskell-language-server", "--lsp"]
+
+[gitHubImport]
+requiredFiles = [".replit", "replit.nix", ".ghci"]
